@@ -43,7 +43,7 @@ with
 
 ```bash
 echo '#!/bin/bash' > run.bash
-echo 'DEBUG=cars:* npm start' >> run.bash
+echo 'DEBUG=cars:* PORT=3000 npm start' >> run.bash
 chmod u+x run.bash
 ./run.bash
 ```
@@ -248,16 +248,17 @@ contents of testit.bash:
 
 ```bash
 #!/bin/bash
+PORT=3000
 
-http localhost:3000
+http localhost:${PORT}
 
-http localhost:3000/cars
-http localhost:3000/cars/new
-http localhost:3000/cars/1
-http localhost:3000/cars/1/edit
-http -f POST localhost:3000/cars make=tesla
-http PUT localhost:3000/cars/1 color=blue
-http DELETE localhost:3000/cars/1
+http localhost:${PORT}/cars
+http localhost:${PORT}/cars/new
+http localhost:${PORT}/cars/1
+http localhost:${PORT}/cars/1/edit
+http -f POST localhost:${PORT}/cars make=tesla model=X color=red year=2016
+http PUT localhost:${PORT}/cars/1 color=blue
+http DELETE localhost:${PORT}/cars/1
 ```
 
 When we run this script, we should see all success status codes (200) and some nicely formatted HTML code for the HTTP GET requests.
@@ -282,8 +283,7 @@ Add the content to the views:
 ```html
 <ul>
   <% cars.forEach(function(car){ %>
-    <li><a href="/cars/<%= car._id %>"><%= car.make + ' ' + car.model %></a></li>
-  <% }) %>
+    <li><a href="/cars/<%= car._id %>"><%= `${car.year} ${car.color} ${car.make} ${car.model}`%></a></li>
 </ul>
 
 <a href="/cars/new"><button>New</button></a>

@@ -1,2 +1,2 @@
 #!/bin/bash
-DEBUG=cars:* npm start
+DEBUG=cars:* PORT=3000 npm start

@@ -1,6 +1,6 @@
 <ul>
   <% cars.forEach(function(car){ %>
-    <li><a href="/cars/<%= car._id %>"><%= car.make + ' ' + car.model %></a></li>
+    <li><a href="/cars/<%= car._id %>"><%= `${car.year} ${car.color} ${car.make} ${car.model}`%></a></li>
   <% }) %>
 </ul>
 
