@@ -1,0 +1,14 @@
+<dl>
+  <dt>Make</dt><dd><%= car.make %></dd>
+  <dt>Model</dt><dd><%= car.model %></dd>
+  <dt>Color</dt><dd><%= car.color %></dd>
+  <dt>Year</dt><dd><%= car.year %></dd>
+</dl>
+
+<a href="/cars/<%= car._id %>/edit"><button>Edit</button></a>
+
+<form method="POST" action="/cars/<%= car._id %>?_method=DELETE">
+  <button type="submit">Delete</button>
+</form>
+
+<a href="/cars"><button>Back</button></a>

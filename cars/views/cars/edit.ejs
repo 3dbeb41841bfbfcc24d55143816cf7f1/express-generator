@@ -1,0 +1,24 @@
+<form action="/cars/<%= car._id %>/?_method=put" method="post">
+  Make:
+  <br>
+  <input type="text" name="make" value="<%= car.make %>">
+  <br>
+
+  Model:
+  <br>
+  <input type="text" name="model" value="<%= car.model %>">
+  <br>
+
+  Year:
+  <br>
+  <input type="number" name="year" value="<%= car.year %>">
+  <br>
+
+  Color:
+  <br>
+  <input type="text" name="color" value="<%= car.color %>">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<a href="/cars"><button>Back</button></a>
