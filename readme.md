@@ -454,6 +454,20 @@ module.exports = router;
 Add the following to the bottom of `public/stylesheets/style.css`:
 
 ```css
+button {
+  color: white;
+  background: #0080ff;
+  margin: 2px;
+  padding: 5px;
+}
+
+input[type="submit"] {
+  color: black;
+  background: #80ff00;
+  margin: 2px;
+  padding: 5px;
+}
+
 dl {
   border: 3px double #ccc;
   padding: 0.5em;
