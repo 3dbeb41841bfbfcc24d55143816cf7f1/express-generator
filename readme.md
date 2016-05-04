@@ -2,6 +2,14 @@
 
 ## Steps to reproduce
 
+* [Step 1 - Creating the Project](#step-1---creating-the-project)
+* [Step 2 - Take a Tour of the Project](#step-2---take-a-tour-of-the-project)
+* [Step 3 - Install and configure Express-EJS-Layouts](#step-3---install-and-configure-express-ejs-layouts)
+* [Step 4 - Install Method-Override](#step-4---install-method-override)
+* [Step 5 - Create Routes for our Cars Views](#step-5---create-routes-for-our-cars-views)
+* [Step 6 - Create Some Views For Our Cars Routes](#step-6---create-some-views-for-our-cars-routes)
+* [Step 7 - Add Some Style](#step-7---add-some-style)
+
 ### Step 1 - Creating the Project
 
 1a. First `cd` into a directory where you can create this project, such as:
